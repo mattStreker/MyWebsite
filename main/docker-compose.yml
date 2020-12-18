@@ -1,0 +1,19 @@
+# docker-compose.yml
+version: "3.7"
+services:
+  client:
+    init: true
+    restart: always
+    image: nginx
+    ports:
+      - 80:80
+    volumes:
+    - .:/usr/share/nginx/html
+  # projects:
+  #   build: ./projects
+  #   volumes:
+  #     - ./app:/usr/share/nginx/html
+  # mainpage:
+  #   build: ./mainpage
+  #   volumes:
+  #     - ./website:/usr/share/nginx/html
